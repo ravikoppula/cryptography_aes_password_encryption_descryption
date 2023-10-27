@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "L/EGaWu2TilbjQ/zByRlEVH+W25Ro9V9l/W5dh2f6FwLtZF11ruKUvPpkIosThvX3ytMeLe2hKavkulE5qrp6w==",
+  "success": true,
+  "projectFilePath": "D:\\recycle-bin\\cryptography_aes\\cryptography_aes\\cryptography_aes.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\C005339\\.nuget\\packages\\system.formats.asn1\\5.0.0\\system.formats.asn1.5.0.0.nupkg.sha512",
+    "C:\\Users\\C005339\\.nuget\\packages\\system.security.cryptography.cng\\5.0.0\\system.security.cryptography.cng.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
