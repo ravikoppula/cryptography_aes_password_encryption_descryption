@@ -1,38 +1,46 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
+using System.Xml.Linq;
 
 namespace Aes_Example
 {
     class AesExample
     {
+
+        static byte[] key = Encoding.UTF8.GetBytes("N1PCdw3M2B1TfJhoaY2mL736p2vCUc47");
+        static byte[] iv = Encoding.UTF8.GetBytes("abcdefghijklmnop");
+        static byte[] encrypted;
+
         public static void Main()
         {
-            string original = "A123456789";
-            byte[] key = Encoding.UTF8.GetBytes("N1PCdw3M2B1TfJhoaY2mL736p2vCUc47");
-            byte[] iv = Encoding.UTF8.GetBytes("abcdefghijklmnop");
+            Console.WriteLine("** Process has been started!");
 
-            // Create a new instance of the Aes
-            // class.  This generates a new key and initialization
-            // vector (IV).
+            Console.WriteLine("Enter the password!");
+            string? inputVal = Console.ReadLine();
+
             using (Aes myAes = Aes.Create())
             {
-                // Encrypt the string to an array of bytes.
-                byte[] encrypted = EncryptStringToBytes_Aes(original, key, iv);
-
-                // Decrypt the bytes to a string.
-                string roundtrip = DecryptStringFromBytes_Aes(encrypted, key, iv);
-
-                //Display the original data and the decrypted data.
-                Console.WriteLine("Original:   {0}", original);
-                Console.WriteLine("Round Trip: {0}", roundtrip);
+                encrypted = EncryptStringToBytes_Aes(inputVal, key, iv);
+                string val = System.Convert.ToBase64String(encrypted);
+                Console.WriteLine("encrypted value:   {0}", val);
             }
 
-        }
+            using (Aes myAes = Aes.Create())
+            {
+                string roundtrip = DecryptStringFromBytes_Aes(encrypted, key, iv);
+                Console.WriteLine("decrypted value: {0}", roundtrip);
+            }
 
-        static byte[] EncryptStringToBytes_Aes(string plainText, byte[] Key, byte[] IV)
+            Console.WriteLine("** Process has been completed!");
+            Console.WriteLine();
+
+        }
+         
+        static byte[] EncryptStringToBytes_Aes(string? plainText, byte[] Key, byte[] IV)
         {
+
             // Check arguments.
             if (plainText == null || plainText.Length <= 0)
                 throw new ArgumentNullException("plainText");
