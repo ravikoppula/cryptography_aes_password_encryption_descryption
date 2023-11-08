@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  cryptography_aes:
+    image: ${DOCKER_REGISTRY-}cryptographyaes
+    build:
+      context: .
+      dockerfile: cryptography_aes\Dockerfile

@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RE7rSsA4Ujrv9fj1r9vmGzIHVA5qiZ2bWFQMDGPWI8ak92huqfH4DvEgaMqgLvEH114kZcaEeToKEo6CfRpukw==",
-  "success": false,
+  "dgSpecHash": "7BO5JUqRvRg3U24sB1LYn+l2OWkHEzX597STNJET1VzJ8ognUbUc+dd5OgFHi1lzGkEyV2stBTlYdVGUIroBDA==",
+  "success": true,
   "projectFilePath": "D:\\recycle-bin\\cryptography_aes\\cryptography_aes\\cryptography_aes.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "libraryId": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets"
-    }
-  ]
+  "logs": []
 }
