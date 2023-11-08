@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "cryptography_aes": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
